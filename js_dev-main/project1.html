@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random color on click</title>
+    <style>
+
+        .container{
+            display: grid;
+            grid-template-areas: 'title title title title'
+                                    'but1 but2 but3 but4'
+                                    'reset reset reset reset';
+                                
+            gap: 10px;
+            border: 2px solid red;
+
+        }
+        body{
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-area: title;
+        }
+        .buttons{
+            border: 2px solid white;
+            height: 100px;
+            width: 100px;
+            cursor: pointer;
+        }
+        #reset{
+            grid-area: reset;
+            border: 2px solid red;
+            height: 20px;
+            /* width: 200px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin:0px 160px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="title">Random Color on Click</span>
+        <div class="buttons colorButtons1" style="grid-area: but1;">Color1</div>
+        <div class="buttons colorButtons2" style="grid-area: but2;">Color2</div>
+        <div class="buttons colorButtons3" style="grid-area: but3;">Color3</div>
+        <div class="buttons colorButtons4" style="grid-area: but4;">Color4</div>
+        <div id="reset">Reset</div>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>
